@@ -85,7 +85,7 @@ public class Simulator {
 	private void processEvents(Event in, Event out) {
 		Double fin = in.getFlow();
 		Double fout = out.getFlow();
-		System.out.println("FIN " + fin + "\tFOUT " + fout);
+		//System.out.println("FIN " + fin + "\tFOUT " + fout);
 		C += fin; // l'acqua entra
 		if ( C > Q ) { // se supero il livello max --> TRACIMAZIONE
 			C = Q; 
@@ -110,6 +110,6 @@ public class Simulator {
 			avg += d;
 		}
 		
-		return avg;
+		return avg/listC.size();
 	}
 }
